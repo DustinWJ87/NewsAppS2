@@ -5,4 +5,5 @@
     <string name="section">Section</string>
     <string name="title">Title</string>
     <string name="date">Date</string>
+    <string name="author">Author</string>
 </resources>

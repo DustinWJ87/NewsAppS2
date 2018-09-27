@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
@@ -7,15 +8,23 @@
     android:padding="@dimen/basicPad">
 
     <TextView
+        android:id="@+id/author"
+        style="@style/SectionTextTheme"
+        tools:text="@string/author"/>
+
+    <TextView
         android:id="@+id/section"
-        style="@style/SectionTextTheme" />
+        style="@style/SectionTextTheme"
+        tools:text="@string/section"/>
 
     <TextView
         android:id="@+id/title"
-        style="@style/TitleTextTheme" />
+        style="@style/TitleTextTheme"
+        tools:text="@string/title"/>
 
     <TextView
         android:id="@+id/date"
-        style="@style/DateTextTheme" />
+        style="@style/DateTextTheme"
+        tools:text="@string/date"/>
 
 </LinearLayout>

@@ -32,14 +32,17 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         News currentNews = getItem(position);
 
-        TextView sectionView = (TextView) convertView.findViewById(R.id.section);
+        TextView sectionView = convertView.findViewById(R.id.section);
         sectionView.setText(currentNews.getSection());
 
-        TextView dateView = (TextView) convertView.findViewById(R.id.date);
+        TextView dateView = convertView.findViewById(R.id.date);
         dateView.setText(currentNews.getDate());
 
-        TextView titleView = (TextView) convertView.findViewById(R.id.title);
+        TextView titleView = convertView.findViewById(R.id.title);
         titleView.setText(currentNews.getTitle());
+
+        TextView authorView = convertView.findViewById(R.id.author);
+        authorView.setText(currentNews.getAuthor());
 
         return convertView;
     }

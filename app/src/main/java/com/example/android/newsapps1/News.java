@@ -2,13 +2,15 @@ package com.example.android.newsapps1;
 
 public class News {
 
-    private String mSection;
+    private String Section;
 
-    private String mDate;
+    private String Date;
 
-    private String mTitle;
+    private String Title;
 
-    private String mURL;
+    private String URL;
+
+    private String Author;
 
     /**
      * Create a new News Object
@@ -18,26 +20,32 @@ public class News {
      * @param title   The title of the article
      * @param url     The website URL to read the full article
      */
-    public News(String section, String date, String title, String url) {
-        mSection = section;
-        mDate = date;
-        mTitle = title;
-        mURL = url;
+    public News(String section, String date, String title, String url, String author) {
+        Section = section;
+        Date = date;
+        Title = title;
+        URL = url;
+        Author = author;
     }
 
+
     public String getSection() {
-        return mSection;
+        return Section;
     }
 
     public String getDate() {
-        return mDate;
+        return Date;
     }
 
     public String getTitle() {
-        return mTitle;
+        return Title;
     }
 
     public String getURL() {
-        return mURL;
+        return URL;
+    }
+
+    public String getAuthor(){
+        return Author;
     }
 }

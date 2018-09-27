@@ -11,7 +11,6 @@
     <style name="SectionTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">@string/section</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">left</item>
@@ -22,7 +21,6 @@
     <style name="TitleTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">@string/title</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">center_horizontal</item>
@@ -36,7 +34,6 @@
     <style name="DateTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">@string/date</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">right</item>

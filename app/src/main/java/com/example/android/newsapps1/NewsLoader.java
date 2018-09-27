@@ -11,7 +11,7 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
     /**
      * Query URL
      */
-    private String mURL;
+    private String URL;
 
     /**
      * Constructs a new NewsLoader
@@ -21,7 +21,7 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
      */
     public NewsLoader(Context context, String url) {
         super(context);
-        mURL = url;
+        URL = url;
     }
 
     @Override
@@ -32,11 +32,11 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
     @Nullable
     @Override
     public List<News> loadInBackground() {
-        if (mURL == null) {
+        if (URL == null) {
             return null;
         }
 
-        List<News> news = QueryUtils.fetchNewsData(mURL);
+        List<News> news = QueryUtils.fetchNewsData(URL);
         return news;
     }
 }

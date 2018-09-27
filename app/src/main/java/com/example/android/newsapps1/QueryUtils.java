@@ -25,6 +25,10 @@ public final class QueryUtils {
 
     public static final String LOG_TAG = NewsActivity.class.getName();
 
+    public static int URL_READ_TIMEOUT = 10000;
+
+    public static int URL_CONNECT_TIMEOUT = 15000;
+
     /**
      * Return a list of News objects that has been built up from parsing a JSON response
      */
@@ -73,12 +77,12 @@ public final class QueryUtils {
 
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000);
-            urlConnection.setConnectTimeout(15000);
+            urlConnection.setReadTimeout(URL_READ_TIMEOUT);
+            urlConnection.setConnectTimeout(URL_CONNECT_TIMEOUT);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
@@ -138,8 +142,23 @@ public final class QueryUtils {
                 String title = newsData.getString("webTitle");
                 String url = newsData.getString("webUrl");
 
-                News data = new News(section, date, title, url);
-                news.add(data);
+                JSONArray tagsArray = newsData.getJSONArray("tags");
+                String author = null;
+
+                if (tagsArray.length() > 0) {
+                    for (int o = 0; o < tagsArray.length(); o++) {
+                        JSONObject currentTag = tagsArray.getJSONObject(o);
+                        try {
+                            author = currentTag.getString("webTitle");
+                        } catch (JSONException e) {
+                            Log.e(LOG_TAG, "Missing one or more author's");
+                        }
+                    }
+
+                    News data = new News(section, date, title, url, author);
+                    news.add(data);
+                }
+
             }
         } catch (JSONException e) {
             Log.e(LOG_TAG, "Problem parsing the news JSON results");
