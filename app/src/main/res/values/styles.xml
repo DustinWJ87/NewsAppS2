@@ -11,7 +11,7 @@
     <style name="SectionTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">left</item>
         <item name="android:textAllCaps">true</item>
@@ -21,7 +21,7 @@
     <style name="TitleTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center_horizontal</item>
@@ -34,7 +34,7 @@
     <style name="DateTextTheme" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_gravity">right</item>
         <item name="android:textSize">@dimen/date_text</item>

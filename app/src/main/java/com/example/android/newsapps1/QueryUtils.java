@@ -29,6 +29,9 @@ public final class QueryUtils {
 
     public static int URL_CONNECT_TIMEOUT = 15000;
 
+    private QueryUtils(){
+    }
+
     /**
      * Return a list of News objects that has been built up from parsing a JSON response
      */

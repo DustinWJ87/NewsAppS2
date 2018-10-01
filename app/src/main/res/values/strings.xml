@@ -1,9 +1,24 @@
 <resources>
-    <string name="app_name">Marvel Movie News</string>
+    <string name="app_name">Movie News</string>
     <string name="no_news">No News Found!</string>
     <string name="no_internet">No More Internet!!!</string>
     <string name="section">Section</string>
     <string name="title">Title</string>
     <string name="date">Date</string>
     <string name="author">Author</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">News Settings</string>
+    <string name="settings_search_key" translatable="false">q</string>
+    <string name="settings_search_default" translatable="false">Avengers</string>
+    <string name="settings_search_label">Movie Selection</string>
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order-by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_relevance_value</string>
+    <string name="settings_order_by_newest_label">Newest</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+    <string name="settings_order_by_relevance_label">Relevance</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+    <string name="settings_order_by_oldest_label">Oldest</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+
 </resources>
